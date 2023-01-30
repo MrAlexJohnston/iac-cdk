@@ -1,12 +1,18 @@
-import * as cdk from 'aws-cdk-lib';
-import { Construct } from 'constructs';
-import * as ec2 from "@aws-cdk/aws-ec2";
-// import * as sqs from 'aws-cdk-lib/aws-sqs';
+import {App, Stack, StackProps} from '@aws-cdk/core';
+import {Peer, Port, SecurityGroup, SubnetType, Vpc} from '@aws-cdk/aws-ec2'
 
-export class CustomVpcStack extends cdk.Stack {
-  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
-    super(scope, id, props);
 
-    new ec2.Vpc(this, "Mycdkvpc");
-  }
+export class VpcStack extends Stack {
+    
+    readonly vpc: Vpc;
+    readonly ingressSecurityGroup: SecurityGroup;
+    readonly egressSecurityGroup: SecurityGroup;
+
+    constructor(scope: App, id: string, props?: StackProps) {
+
+       super(scope, id, props);
+   
+       //Place resource definitions here.
+
+   }
 }
