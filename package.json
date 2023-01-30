@@ -1,0 +1,22 @@
+{
+  "name": "iac-cdk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrAlexJohnston/iac-cdk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrAlexJohnston/iac-cdk/issues"
+  },
+  "homepage": "https://github.com/MrAlexJohnston/iac-cdk#readme",
+  "dependencies": {
+    "aws-cdk-lib": "^2.62.2"
+  }
+}
