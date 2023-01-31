@@ -9,10 +9,18 @@ export class VpcStack extends Stack {
     readonly egressSecurityGroup: SecurityGroup;
 
     constructor(scope: App, id: string, props?: StackProps) {
-
-       super(scope, id, props);
-   
-       //Place resource definitions here.
+      
+      super(scope, id, props);
+      this.vpc = new Vpc(this, 'CustomVPC', {
+         cidr: '10.192.0.0/16',
+         maxAzs: 2,
+         subnetConfiguration: [{
+            cidrMask: 26,
+            name: 'isolatedSubnet',
+            subnetType: SubnetType.ISOLATED,
+         }],
+         natGateways: 0
+      });
 
    }
 }
